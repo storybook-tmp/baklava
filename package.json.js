@@ -63,7 +63,7 @@ const packageConfig = {
     // Storybook
     'storybook:serve': 'storybook dev -p 6006',
     'storybook:build': 'storybook build --docs',
-    'chromatic': 'npx chromatic', // Must be run with `CHROMATIC_PROJECT_TOKEN` env variable (secret)
+    'chromatic': 'chromatic --exit-zero-on-changes --only-changed', // Must be run with `CHROMATIC_PROJECT_TOKEN` env variable (secret)
     
     // Static analysis
     'check:types': 'tsc -b',
@@ -125,13 +125,13 @@ const packageConfig = {
     'playwright': '^1.58.2',
     
     // Storybook
-    'storybook': '^10.2.19',
-    '@storybook/react-vite': '^10.2.19',
-    '@storybook/addon-a11y': '^10.2.19',
-    '@storybook/addon-designs': '^11.1.2',
-    '@storybook/addon-docs': '^10.2.19',
-    '@storybook/addon-links': '^10.2.19',
-    '@storybook/addon-vitest': '^10.2.19',
+    'storybook': '^10.3.3',
+    '@storybook/react-vite': '^10.3.3',
+    '@storybook/addon-a11y': '^10.3.3',
+    '@storybook/addon-docs': '^10.3.3',
+    '@storybook/addon-links': '^10.3.3',
+    '@storybook/addon-onboarding': '^10.3.3',
+    '@storybook/addon-vitest': '^10.3.3',
     'chromatic': '^15.2.0', // https://github.com/chromaui/chromatic-cli/blob/main/CHANGELOG.md
     '@chromatic-com/storybook': '^5.0.1', // Chromatic integration for Storybook
     //'storybook-addon-pseudo-states': '^3.1.1',

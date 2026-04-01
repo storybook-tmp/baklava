@@ -152,7 +152,6 @@ export default defineConfig({
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
           storybookTest({
             configDir: path.join(dirname, '.storybook'),
-            storybookScript: 'npm run storybook:serve -- --no-open',
           }),
         ],
         test: {
@@ -167,7 +166,6 @@ export default defineConfig({
               },
             ],
           },
-          setupFiles: [path.join(dirname, '.storybook/vitest.setup.ts')],
         },
       },
     ],

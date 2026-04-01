@@ -4,6 +4,7 @@
 
 # Environment-specific
 /.env
+/.env.local
 
 # Build files
 /dist/
@@ -17,3 +18,5 @@
 /dist/storybook
 /storybook-static
 /build-storybook.log
+
+*storybook.log
