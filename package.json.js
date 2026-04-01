@@ -63,6 +63,7 @@ const packageConfig = {
     // Storybook
     'storybook:serve': 'storybook dev -p 6006',
     'storybook:build': 'storybook build --docs',
+    'build-storybook': 'npm run storybook:build',
     'chromatic': 'chromatic --exit-zero-on-changes --only-changed', // Must be run with `CHROMATIC_PROJECT_TOKEN` env variable (secret)
     
     // Static analysis

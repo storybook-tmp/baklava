@@ -45,6 +45,7 @@
     "build": "tsc -b && vite --config=./vite.config.ts build && npm run verify verify:build",
     "storybook:serve": "storybook dev -p 6006",
     "storybook:build": "storybook build --docs",
+    "build-storybook": "npm run storybook:build",
     "chromatic": "chromatic --exit-zero-on-changes --only-changed",
     "check:types": "tsc -b",
     "lint:style": "stylelint 'src/**/*.scss'",
