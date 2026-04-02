@@ -46,11 +46,26 @@ export default defineConfig({
   base: "./", // Assets base URL
 
   assetsInclude: ["**/*.md"], // Add `.md` as static asset type
+  optimizeDeps: {
+    include: [
+      '@floating-ui/react',
+      '@storybook/react-vite',
+      '@testing-library/jest-dom',
+      '@testing-library/react',
+      'classnames/dedupe',
+      'date-fns',
+      'message-tag',
+      'react-datepicker',
+      'react-table',
+      'zustand',
+    ],
+  },
 
   resolve: {
     alias: {
       // Needed for file references in Sass code (relative paths don't resolve properly when imported with `@use`)
       "@": path.resolve(__dirname, "./src"),
+      "#.storybook/preview": path.resolve(__dirname, "./.storybook/preview.ts"),
     },
   },
 
