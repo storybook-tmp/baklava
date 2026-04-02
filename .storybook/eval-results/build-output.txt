@@ -1,0 +1,917 @@
+
+┌  Building storybook v0.0.0-pr-34421-sha-0f73e3a9
+│
+◇  Cleaning outputDir: storybook-static
+│
+◇  Loading presets
+│
+◇  Building manager..
+│
+●  Building preview..
+│
+▲  Vite
+│  [vite:dts] You are building a library that may not need to generate
+│  declaration files.
+
+│  Vite vite v8.0.0 building client environment for production...
+[2Ktransforming...✓ 258 modules transformed.
+rendering chunks...
+│  Vite
+│  [vite:dts] Start generate declaration files...
+│
+■  Vite [96m.storybook/preview.tsx[0m:[93m2[0m:[93m8[0m - [91merror[0m[90m TS2307: [0mCannot find module
+│  'virtual:svg-icons/register' or its corresponding type declarations.
+
+│  [7m2[0m import 'virtual:svg-icons/register';
+│  [7m[0m[91m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+│  [96m.storybook/preview.tsx[0m:[93m12[0m:[93m14[0m - [91merror[0m[90m TS2322: [0mType 'Element' is not
+│  assignable to type 'never'.
+
+│  [7m12[0m     Story => (
+│  [7m[0m[91m~[0m
+│  [7m13[0m       <BaklavaProvider>
+│  [7m[0m[91m~~~~~~~~~~~~~~~~~~~~~~~[0m
+│  [7m...[0m
+│  [7m17[0m       </BaklavaProvider>
+│  [7m[0m[91m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+│  [7m18[0m     ),
+│  [7m[0m[91m~~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1260[0m:[93m79[0m
+│  [7m1260[0m type DecoratorFunction<TRenderer extends Renderer = Renderer,
+│  TArgs = Args> = (fn: PartialStoryFn<TRenderer, TArgs>, c:
+│  StoryContext<TRenderer, TArgs>) => TRenderer['storyResult'];
+│  [7m[0m[96m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+│  The expected type comes from the return type of this signature.
+│  [96m.storybook/preview.tsx[0m:[93m20[0m:[93m3[0m - [91merror[0m[90m TS2322: [0mType '{ controls: {
+│  matchers: { color: RegExp; date: RegExp; }; }; a11y: { test: string;
+│  }; }' is not assignable to type 'never'.
+
+│  [7m20[0m   parameters: {
+│  [7m[0m[91m~~~~~~~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1277[0m:[93m5[0m
+│  [7m1277[0m     parameters?: Parameters$1 & (TRenderer['csf4'] extends true ?
+│  CoreTypes['parameters'] & TRenderer['parameters'] : unknown);
+│  [7m[0m[96m~~~~~~~~~~[0m
+│  The expected type comes from property 'parameters' which is declared
+│  here on type '{ addons: PreviewAddon<never>[]; } &
+│  ProjectAnnotations<never>'
+│  [96msrc/components/actions/Button/Button.stories.ts[0m:[93m10[0m:[93m3[0m - [91merror[0m[90m TS2322:[39m
+│  [90m[0mType '{ onPress: Mock<Procedure>; }' is not assignable to type
+│  'never'.
+
+│  [7m10[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/@storybook/react/dist/index.d.ts[0m:[93m562[0m:[93m9[0m
+│  [7m562[0m         args?: TMetaArgs;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ render?: ArgsStoryFn<never, never>; component?:
+│  ComponentType<ButtonProps>; decorators?: DecoratorFunction<never, any>
+│  | DecoratorFunction<never, any>[]; args?: never; } &
+│  Omit<ComponentAnnotations<never, ButtonProps>, "render" | "decorators"
+│  | "component" | "args">'
+│  [96msrc/components/actions/Button/Button.stories.ts[0m:[93m16[0m:[93m3[0m - [91merror[0m[90m TS2769:[39m
+│  [90m[0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ label: string; kind: string; icon: string; }' is not
+│  assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ label: string; kind: string; icon: string; }' is not
+│  assignable to type 'never'.
+
+│  [7m16[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/actions/Button/Button.stories.ts[0m:[93m24[0m:[93m3[0m - [91merror[0m[90m TS2769:[39m
+│  [90m[0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ label: string; kind: string; disabled: true; }' is not
+│  assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ label: string; kind: string; disabled: true; }' is not
+│  assignable to type 'never'.
+
+│  [7m24[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/containers/Accordion/Accordion.stories.ts[0m:[93m30[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2322: [0mType '(args: ComponentProps<typeof Accordion>) =>
+│  FunctionComponentElement<AccordionProps>' is not assignable to type
+│  'ArgsStoryFn<never, never>'.
+│  Type 'FunctionComponentElement<AccordionProps>' is not assignable to
+│  type 'never'.
+
+│  [7m30[0m   render: renderAccordion,
+│  [7m[0m[91m~~~~~~[0m
+
+│  [96mnode_modules/@storybook/react/dist/index.d.ts[0m:[93m559[0m:[93m9[0m
+│  [7m559[0m         render?: ArgsStoryFn<ReactTypes & T, TArgs & T['args']>;
+│  [7m[0m[96m~~~~~~[0m
+│  The expected type comes from property 'render' which is declared here
+│  on type '{ render?: ArgsStoryFn<never, never>; component?:
+│  ComponentType<AccordionProps>; decorators?: DecoratorFunction<never,
+│  any> | DecoratorFunction<never, any>[]; args?: never; } &
+│  Omit<ComponentAnnotations<never, AccordionProps>, "render" |
+│  "decorators" | "component" | "args">'
+│  [96msrc/components/containers/Accordion/Accordion.stories.ts[0m:[93m34[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ exclusive: true; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ exclusive: true; }' is not assignable to type 'never'.
+
+│  [7m34[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/containers/Accordion/Accordion.stories.ts[0m:[93m40[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ exclusive: false; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ exclusive: false; }' is not assignable to type 'never'.
+
+│  [7m40[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/containers/Banner/Banner.stories.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ variant: string; title: string; children: string; actions:
+│  FunctionComponentElement<ActionButtonProps>; }' is not assignable to
+│  type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ variant: string; title: string; children: string; actions:
+│  FunctionComponentElement<ActionButtonProps>; }' is not assignable to
+│  type 'never'.
+
+│  [7m14[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/containers/Banner/Banner.stories.ts[0m:[93m26[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ compact: false; variant: string; title: string; children:
+│  string; actions: FunctionComponentElement<ActionButtonProps>;
+│  showCloseAction: true; onClose: Mock<Procedure>; }' is not assignable
+│  to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ compact: false; variant: string; title: string; children:
+│  string; actions: FunctionComponentElement<ActionButtonProps>;
+│  showCloseAction: true; onClose: Mock<Procedure>; }' is not assignable
+│  to type 'never'.
+
+│  [7m26[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/containers/Card/Card.stories.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m TS2322:[39m
+│  [90m[0mType '(args: ComponentProps<typeof Card>) =>
+│  FunctionComponentElement<CardProps>' is not assignable to type
+│  'ArgsStoryFn<never, never>'.
+│  Type 'FunctionComponentElement<CardProps>' is not assignable to type
+│  'never'.
+
+│  [7m17[0m   render: renderCard,
+│  [7m[0m[91m~~~~~~[0m
+
+│  [96mnode_modules/@storybook/react/dist/index.d.ts[0m:[93m559[0m:[93m9[0m
+│  [7m559[0m         render?: ArgsStoryFn<ReactTypes & T, TArgs & T['args']>;
+│  [7m[0m[96m~~~~~~[0m
+│  The expected type comes from property 'render' which is declared here
+│  on type '{ render?: ArgsStoryFn<never, never>; component?:
+│  ComponentType<CardProps>; decorators?: DecoratorFunction<never, any> |
+│  DecoratorFunction<never, any>[]; args?: never; } &
+│  Omit<ComponentAnnotations<never, CardProps>, "render" | "decorators" |
+│  "component" | "args">'
+│  [96msrc/components/containers/Card/Card.stories.ts[0m:[93m21[0m:[93m3[0m - [91merror[0m[90m TS2769: [0mNo
+│  overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{}' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{}' is not assignable to type 'never'.
+
+│  [7m21[0m   args: {},
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/containers/Card/Card.stories.ts[0m:[93m25[0m:[93m3[0m - [91merror[0m[90m TS2769: [0mNo
+│  overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ flat: true; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ flat: true; }' is not assignable to type 'never'.
+
+│  [7m25[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/forms/controls/Input/Input.stories.ts[0m:[93m14[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ type: string; placeholder: string; icon: string; iconLabel:
+│  string; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ type: string; placeholder: string; icon: string; iconLabel:
+│  string; }' is not assignable to type 'never'.
+
+│  [7m14[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/forms/controls/Input/Input.stories.ts[0m:[93m23[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ defaultValue: string; prefix: string; actions:
+│  FunctionComponentElement<Omit<Omit<ComponentProps<"button">, "type"> &
+│  { unstyled?: undefined | boolean; trimmed?: undefined | boolean;
+│  label?: undefined | string; icon?: undefined | IconName; kind?:
+│  undefined | "primary" | "secondary" | "tertiary"; variant?: undefined
+│  | "normal"; disabled?: undefined | boolean; nonactive?: undefined |
+│  boolean; asyncTimeout?: number; onPress?: undefined | (() => void |
+│  Promise<void>); } & { children?: ReactNode | undefined; },
+│  "className"> & { className?: undefined | classNames.Argument; } & {
+│  unstyled?: undefined | boolean; iconClassName?: undefined |
+│  classNames.Argument; label: string; icon: IconName; iconProps?:
+│  undefined | Omit<ComponentProps<typeof Icon>, "icon">; inline?:
+│  undefined | boolean; } & { children?: ReactNode | undefined; }>; }' is
+│  not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ defaultValue: string; prefix: string; actions:
+│  FunctionComponentElement<Omit<Omit<ComponentProps<"button">, "type"> &
+│  { unstyled?: undefined | boolean; trimmed?: undefined | boolean;
+│  label?: undefined | string; icon?: undefined | IconName; kind?:
+│  undefined | "primary" | "secondary" | "tertiary"; variant?: undefined
+│  | "normal"; disabled?: undefined | boolean; nonactive?: undefined |
+│  boolean; asyncTimeout?: number; onPress?: undefined | (() => void |
+│  Promise<void>); } & { children?: ReactNode | undefined; },
+│  "className"> & { className?: undefined | classNames.Argument; } & {
+│  unstyled?: undefined | boolean; iconClassName?: undefined |
+│  classNames.Argument; label: string; icon: IconName; iconProps?:
+│  undefined | Omit<ComponentProps<typeof Icon>, "icon">; inline?:
+│  undefined | boolean; } & { children?: ReactNode | undefined; }>; }' is
+│  not assignable to type 'never'.
+
+│  [7m23[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/forms/controls/Select/Select.stories.ts[0m:[93m38[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2322: [0mType '{ label: string; options:
+│  FunctionComponentElement<FragmentProps>; }' is not assignable to type
+│  'never'.
+
+│  [7m38[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/@storybook/react/dist/index.d.ts[0m:[93m562[0m:[93m9[0m
+│  [7m562[0m         args?: TMetaArgs;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ render?: ArgsStoryFn<never, never>; component?:
+│  ComponentType<SelectProps>; decorators?: DecoratorFunction<never, any>
+│  | DecoratorFunction<never, any>[]; args?: never; } &
+│  Omit<ComponentAnnotations<never, SelectProps>, "render" | "decorators"
+│  | "component" | "args">'
+│  [96msrc/components/forms/controls/Select/Select.stories.ts[0m:[93m45[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ defaultSelected: string; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ defaultSelected: string; }' is not assignable to type 'never'.
+
+│  [7m45[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/forms/controls/Select/Select.stories.ts[0m:[93m51[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ placeholder: string; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ placeholder: string; }' is not assignable to type 'never'.
+
+│  [7m51[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/graphics/Spinner/Spinner.stories.ts[0m:[93m11[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ size: string; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ size: string; }' is not assignable to type 'never'.
+
+│  [7m11[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/graphics/Spinner/Spinner.stories.ts[0m:[93m17[0m:[93m3[0m - [91merror[0m[90m[39m
+│  [90mTS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ inline: true; size: string; }' is not assignable to type
+│  'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ inline: true; size: string; }' is not assignable to type
+│  'never'.
+
+│  [7m17[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/overlays/DialogModal/DialogModal.stories.ts[0m:[93m13[0m:[93m3[0m -
+│  [91merror[0m[90m TS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ activeDefault: true; renderMethod: string; title: string;
+│  children: string; actions: FunctionComponentElement<ActionProps>; }'
+│  is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ activeDefault: true; renderMethod: string; title: string;
+│  children: string; actions: FunctionComponentElement<ActionProps>; }'
+│  is not assignable to type 'never'.
+
+│  [7m13[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/overlays/DialogModal/DialogModal.stories.ts[0m:[93m25[0m:[93m3[0m -
+│  [91merror[0m[90m TS2769: [0mNo overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ activeDefault: true; renderMethod: string; display: string;
+│  size: string; state: string; title: string; children: string; }' is
+│  not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ activeDefault: true; renderMethod: string; display: string;
+│  size: string; state: string; title: string; children: string; }' is
+│  not assignable to type 'never'.
+
+│  [7m25[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/text/Tag/Tag.stories.ts[0m:[93m13[0m:[93m3[0m - [91merror[0m[90m TS2769: [0mNo
+│  overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ content: string; }' is not assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ content: string; }' is not assignable to type 'never'.
+
+│  [7m13[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+│  [96msrc/components/text/Tag/Tag.stories.ts[0m:[93m19[0m:[93m3[0m - [91merror[0m[90m TS2769: [0mNo
+│  overload matches this call.
+│  Overload 1 of 3, '(story: (() => Element) | (BaseAnnotations<never,
+│  never> & { name?: string; storyName?: string; play?:
+│  PlayFunction<never, never>; globals?: never; story?: Omit<...>; } & {
+│  ...; } & { ...; })): ReactStory<...>', gave the following error.
+│  Type '{ content: string; onRemove: Mock<Procedure>; }' is not
+│  assignable to type 'never'.
+│  Overload 2 of 3, '(story: { decorators?: DecoratorFunction<never,
+│  never> | DecoratorFunction<never, never>[]; parameters?: never; args:
+│  never; argTypes?: never; loaders?: LoaderFunction<...> |
+│  LoaderFunction<...>[]; ... 9 more ...; story?: Omit<...>; }):
+│  ReactStory<...>', gave the following error.
+│  Type '{ content: string; onRemove: Mock<Procedure>; }' is not
+│  assignable to type 'never'.
+
+│  [7m19[0m   args: {
+│  [7m[0m[91m~~~~[0m
+
+│  [96mnode_modules/storybook/dist/csf/index.d.ts[0m:[93m1283[0m:[93m5[0m
+│  [7m1283[0m     args?: Partial<TArgs>;
+│  [7m[0m[96m~~~~[0m
+│  The expected type comes from property 'args' which is declared here on
+│  type '{ decorators?: DecoratorFunction<never, never> |
+│  DecoratorFunction<never, never>[]; parameters?: never; args: never;
+│  argTypes?: never; loaders?: LoaderFunction<never, never> |
+│  LoaderFunction<never, never>[]; beforeEach?: BeforeEach<never, never>
+│  | BeforeEach<never, never>[]; afterEach?: AfterEach<never, never> |
+│  AfterEach<never, never>[]; render?: ArgsStoryFn<never, never>; tags?:
+│  string[]; mount?: (context: StoryContext<never, never>) => never;
+│  name?: string; storyName?: string; play?: PlayFunction<never, never>;
+│  globals?: never; story?: Omit<StoryAnnotations<never, never, never>,
+│  "story">; }'
+
+│  Vite [vite:dts] Declaration files built in 4378ms.
+
+computing gzip size...
+│  Vite storybook-static/assets/context-C0qIqeS4.png
+│  6.11 kB
+│  storybook-static/assets/styling-Bk6zjRzU.png
+│  7.23 kB
+│  storybook-static/assets/source-code-pro-v14-latin-regular-m_t_6fI-.woff2
+│  13.76 kB
+│  storybook-static/assets/open-sans-v23-latin-regular-B5w680Sh.woff2
+│  14.44 kB
+│  storybook-static/assets/open-sans-v23-latin-600-DE3RXGo1.woff2
+│  14.95 kB
+│  storybook-static/assets/open-sans-v23-latin-700-I2siTApF.woff2
+│  15.11 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-100-CDbDUzSo.woff2
+│  17.84 kB
+│  storybook-static/iframe.html
+│  18.87 kB │ gzip:   5.36 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-200-gPwWznAn.woff2
+│  19.11 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-300-ZhRT9hBp.woff2
+│  19.33 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-regular-Cv6cyHvc.woff2
+│  19.39 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-600-MsbOrCbp.woff2
+│  19.46 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-500-BGBNs1AU.woff2
+│  19.58 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-700-BYJdiEkj.woff2
+│  19.76 kB
+│  storybook-static/assets/docs---vsFbMi.png
+│  27.87 kB
+│  storybook-static/assets/share-DGA-UcQf.png
+│  40.76 kB
+│  storybook-static/assets/accessibility-W_h2acOZ.png
+│  42.33 kB
+│  storybook-static/assets/figma-plugin-CH2hELiO.png
+│  44.24 kB
+│  storybook-static/assets/theming-D6WJLNoW.png
+│  44.37 kB
+│  storybook-static/assets/testing-cbzR9l9r.png
+│  49.31 kB
+│  storybook-static/assets/addon-library-BWUCAmyN.png
+│  467.36 kB
+│  storybook-static/assets/Header-CzZBVs_w.css
+│  0.50 kB │ gzip:   0.29 kB
+│  storybook-static/assets/Button-C9QAnAgh.css
+│  0.51 kB │ gzip:   0.28 kB
+│  storybook-static/assets/Tag-D4KTaxMV.css
+│  0.65 kB │ gzip:   0.36 kB
+│  storybook-static/assets/Page-R7v0XIE6.css
+│  0.91 kB │ gzip:   0.39 kB
+│  storybook-static/assets/Heading-ptFAfSHL.css
+│  1.07 kB │ gzip:   0.23 kB
+│  storybook-static/assets/Input-BB2GT9c0.css
+│  1.43 kB │ gzip:   0.58 kB
+│  storybook-static/assets/Card-0Ydpu7bp.css
+│  3.55 kB │ gzip:   1.05 kB
+│  storybook-static/assets/Accordion-C0SIOlG1.css
+│  3.98 kB │ gzip:   0.99 kB
+│  storybook-static/assets/DialogModal-D9sxDoEA.css
+│  14.45 kB │ gzip:   1.99 kB
+│  storybook-static/assets/Select-B_5fbNDw.css
+│  16.37 kB │ gzip:   2.61 kB
+│  storybook-static/assets/iframe-BHQipl3C.css
+│  59.71 kB │ gzip:   7.78 kB
+│  storybook-static/assets/theming-CPVBxngw.js
+│  0.07 kB │ gzip:   0.08 kB
+│  storybook-static/assets/components-MTkLOYHA.js
+│  0.14 kB │ gzip:   0.14 kB
+│  storybook-static/assets/chunk-242VQQM5-DhDXsZYD.js
+│  0.21 kB │ gzip:   0.18 kB
+│  storybook-static/assets/formatter-EIJCOSYU-C7ykrfM4.js
+│  0.23 kB │ gzip:   0.19 kB
+│  storybook-static/assets/mdx-react-shim-gfoZ5H-l.js
+│  0.32 kB │ gzip:   0.23 kB
+│  storybook-static/assets/Header.stories-D9IfzyMH.js
+│  0.72 kB │ gzip:   0.41 kB
+│  storybook-static/assets/Spinner.stories-CiWSRbDS.js
+│  0.75 kB │ gzip:   0.37 kB
+│  storybook-static/assets/chunk-SL3VIQZ3-B2gd49t0.js
+│  0.81 kB │ gzip:   0.46 kB
+│  storybook-static/assets/Button.stories-CL7oWcSu.js
+│  0.94 kB │ gzip:   0.47 kB
+│  storybook-static/assets/chunk-BneVvdWh.js
+│  1.11 kB │ gzip:   0.63 kB
+│  storybook-static/assets/Button.stories-DzlL4bPB.js
+│  1.26 kB │ gzip:   0.50 kB
+│  storybook-static/assets/preload-helper-CV6hqhE5.js
+│  1.27 kB │ gzip:   0.73 kB
+│  storybook-static/assets/Input.stories-DWDnAi5z.js
+│  1.33 kB │ gzip:   0.63 kB
+│  storybook-static/assets/Button-CgjIdrV_.js
+│  1.36 kB │ gzip:   0.67 kB
+│  storybook-static/assets/Banner.stories-DnQ_Rf7w.js
+│  1.88 kB │ gzip:   0.78 kB
+│  storybook-static/assets/Tag.stories-D65GgnI1.js
+│  1.98 kB │ gzip:   0.95 kB
+│  storybook-static/assets/Header-Cni0Q387.js
+│  2.03 kB │ gzip:   0.87 kB
+│  storybook-static/assets/summary-DuPS2gVs.js
+│  2.87 kB │ gzip:   0.76 kB
+│  storybook-static/assets/Heading-LrTH-oc-.js
+│  3.26 kB │ gzip:   0.52 kB
+│  storybook-static/assets/Page.stories-CjGBvuh_.js
+│  3.62 kB │ gzip:   1.58 kB
+│  storybook-static/assets/chunk-3LY4VQVK-DCNlYdu3.js
+│  4.83 kB │ gzip:   2.05 kB
+│  storybook-static/assets/Accordion.stories-DV2f48h1.js
+│  5.27 kB │ gzip:   1.69 kB
+│  storybook-static/assets/Card.stories-CvexNgxC.js
+│  5.90 kB │ gzip:   2.01 kB
+│  storybook-static/assets/react-B_0iYUWB.js
+│  7.52 kB │ gzip:   2.87 kB
+│  storybook-static/assets/Input-BAy3mxck.js
+│  7.93 kB │ gzip:   2.20 kB
+│  storybook-static/assets/transcript-CNAqpGIw.js
+│  14.41 kB │ gzip:   4.70 kB
+│  storybook-static/assets/chunk-RD3KTAHR-DRYWiYcN.js
+│  20.70 kB │ gzip:   6.91 kB
+│  storybook-static/assets/DialogModal.stories-BaDfzox3.js
+│  25.57 kB │ gzip:   6.00 kB
+│  storybook-static/vite-inject-mocker-entry.js
+│  27.85 kB │ gzip:   9.64 kB
+│  storybook-static/assets/Color-23OOGO2C-CkuD79Fb.js
+│  30.93 kB │ gzip:  11.61 kB
+│  storybook-static/assets/WithTooltip-65CFNBJE-BzTBAVOv.js
+│  33.23 kB │ gzip:  11.65 kB
+│  storybook-static/assets/theming-2tOc5XVD.js
+│  55.01 kB │ gzip:  21.21 kB
+│  storybook-static/assets/Select.stories-D2dUS9OC.js
+│  72.08 kB │ gzip:  12.77 kB
+│  storybook-static/assets/syntaxhighlighter-OH4MV7E3-PMUJnq9W.js
+│  76.10 kB │ gzip:  27.37 kB
+│  storybook-static/assets/react-18-DujafzBO.js
+│  179.06 kB │ gzip:  56.64 kB
+│  storybook-static/assets/Configure-Du9RyemT.js
+│  195.76 kB │ gzip:  64.40 kB
+│  storybook-static/assets/csf-CSboNsDc.js
+│  237.13 kB │ gzip:  79.56 kB
+│  storybook-static/assets/components-DT984QHZ.js
+│  454.07 kB │ gzip: 142.21 kB
+│  storybook-static/assets/data-D99t2NCO.js
+│  883.77 kB │ gzip: 165.13 kB
+│  storybook-static/assets/iframe-C7AoMVoG.js
+│  1,181.10 kB │ gzip: 342.58 kB
+
+│
+▲  Vite [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in
+│  plugins. Here is a breakdown:
+│  - storybook:mock-loader (22%)
+│  - vite:css (19%)
+│  - storybook:react-docgen-plugin (17%)
+│  - storybook:project-annotations-plugin (16%)
+│  - vite:dts (14%)
+│  See ]8;;https://rolldown.rs/options/checks#plugintimingshttps://rolldown.rs/options/checks#plugintimings]8;; for more details.
+
+│
+▲  Vite [plugin builtin:vite-reporter]
+│  (!) Some chunks are larger than 500 kB after minification. Consider:
+│  - Using dynamic import() to code-split the application
+│  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+│  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+│  - Adjust chunk size limit for this warning via
+│  build.chunkSizeWarningLimit.
+│  Vite ✓ built in 6.45s
+│
+◇  Output directory:
+│  /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-02T19-11-58Z-ba7bd2dc/project/storybook-static
+│
+└  Storybook build completed successfully
+
+
