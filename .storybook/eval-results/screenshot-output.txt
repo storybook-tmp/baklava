@@ -1,0 +1,9 @@
+RUN  v4.1.0 /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-02T19-07-32Z-c090d60e/project
+
+2:15:52 AM [vite] (client) Re-optimizing dependencies because vite config has changed
+Port 63315 is in use, trying another one...
+
+ Test Files  8 passed (8)
+      Tests  16 passed (16)
+   Start at  02:15:52
+   Duration  8.49s (transform 0ms, setup 23.49s, import 8.46s, tests 8.98s, environment 0ms)
