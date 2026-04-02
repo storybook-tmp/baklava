@@ -1,34 +1,40 @@
 /// <reference types="vitest/config" />
 /// <reference types="vitest" />
 
-import * as path from 'node:path';
+import * as path from "node:path";
 //import * as url from 'node:url';
 //import { glob } from 'tinyglobby';
 
-import browserslist from 'browserslist';
-import { defineConfig, esmExternalRequirePlugin } from 'vite';
-import { Features as LightningCssFeatures, browserslistToTargets } from 'lightningcss';
+import browserslist from "browserslist";
+import { defineConfig, esmExternalRequirePlugin } from "vite";
+import {
+  Features as LightningCssFeatures,
+  browserslistToTargets,
+} from "lightningcss";
 
 // Vite plugins
-import dts from 'vite-plugin-dts';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
-import svgr from 'vite-plugin-svgr';
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons-ng';
-import react from '@vitejs/plugin-react';
-import { fileURLToPath } from 'node:url';
-import { storybookTest } from '@storybook/addon-vitest/vitest-plugin';
-import { playwright } from '@vitest/browser-playwright';
-const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(fileURLToPath(import.meta.url));
+import dts from "vite-plugin-dts";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
+import svgr from "vite-plugin-svgr";
+import { createSvgIconsPlugin } from "vite-plugin-svg-icons-ng";
+import react from "@vitejs/plugin-react";
+import { fileURLToPath } from "node:url";
+import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
+import { playwright } from "@vitest/browser-playwright";
+const dirname =
+  typeof __dirname !== "undefined"
+    ? __dirname
+    : path.dirname(fileURLToPath(import.meta.url));
 const playwrightProviderOptions =
-  process.env.STORYBOOK_TEST_SCREENSHOTS === 'true'
+  process.env.STORYBOOK_TEST_SCREENSHOTS === "true"
     ? {
         contextOptions: {
           deviceScaleFactor: 2,
-          viewport: { width: 390, height: 844 },
+          viewport: { width: 393, height: 852 },
           isMobile: true,
           hasTouch: true,
           userAgent:
-            'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1",
         },
       }
     : {};
@@ -36,15 +42,15 @@ const playwrightProviderOptions =
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 
 export default defineConfig({
-  root: './app', // Run with `app` as root, so that files like `index.html` are by default referenced from there
-  base: './', // Assets base URL
-  
-  assetsInclude: ['**/*.md'], // Add `.md` as static asset type
+  root: "./app", // Run with `app` as root, so that files like `index.html` are by default referenced from there
+  base: "./", // Assets base URL
+
+  assetsInclude: ["**/*.md"], // Add `.md` as static asset type
 
   resolve: {
     alias: {
       // Needed for file references in Sass code (relative paths don't resolve properly when imported with `@use`)
-      '@': path.resolve(__dirname, './src'),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
 
@@ -55,24 +61,24 @@ export default defineConfig({
 
     // Handle SVG sprite icons
     createSvgIconsPlugin({
-      iconDirs: [path.resolve(__dirname, 'src/assets/icons')],
-      symbolId: 'baklava-icon-[name]',
-      inject: 'body-last',
-      customDomId: 'baklava-icon-sprite',
+      iconDirs: [path.resolve(__dirname, "src/assets/icons")],
+      symbolId: "baklava-icon-[name]",
+      inject: "body-last",
+      customDomId: "baklava-icon-sprite",
     }),
     //libInjectCss(), // Disabled for now (`.css` import causes issues in vitest)
 
     // Generate `.d.ts` files
     dts({
       // https://github.com/qmhc/vite-plugin-dts/issues/275#issuecomment-1963123685
-      outDir: 'dist', // dts.root + 'dist' => where we need to rollup.
-      root: '../', //vite.root + ../ = ./ = (dts.root)
+      outDir: "dist", // dts.root + 'dist' => where we need to rollup.
+      root: "../", //vite.root + ../ = ./ = (dts.root)
       staticImport: true,
       insertTypesEntry: true,
       //rollupTypes: true, // Issue: https://github.com/qmhc/vite-plugin-dts/issues/399
 
       //include: [path.resolve(__dirname, 'app')],
-      tsconfigPath: path.resolve(__dirname, 'tsconfig.app.json'),
+      tsconfigPath: path.resolve(__dirname, "tsconfig.app.json"),
     }),
   ],
   css: {
@@ -81,11 +87,13 @@ export default defineConfig({
       scss: {},
     },
     // Configure postprocessing using lightningcss
-    transformer: 'lightningcss',
+    transformer: "lightningcss",
     lightningcss: {
-      targets: browserslistToTargets(browserslist(
-        `fully supports css-nesting AND fully supports css-cascade-layers`
-      )),
+      targets: browserslistToTargets(
+        browserslist(
+          `fully supports css-nesting AND fully supports css-cascade-layers`,
+        ),
+      ),
       exclude: LightningCssFeatures.LightDark, // Do not include the `light-dark()` polyfill (it's too buggy)
       cssModules: {
         //pattern: '[hash]_[local]',
@@ -106,19 +114,19 @@ export default defineConfig({
     */
 
     copyPublicDir: false, // Do not copy `./public` into the output dir
-    outDir: path.resolve(__dirname, 'dist'),
+    outDir: path.resolve(__dirname, "dist"),
     lib: {
-      entry: path.resolve(__dirname, 'app/baklava.ts'),
+      entry: path.resolve(__dirname, "app/baklava.ts"),
       fileName: (_format, entryName) => `${entryName}.js`,
       //cssFileName: 'baklava',
-      formats: ['es'],
+      formats: ["es"],
     },
     rolldownOptions: {
       // Do not include React in the output (rely on the consumer to bring their own version)
       // external: ['react', 'react/jsx-runtime'],
       plugins: [
         esmExternalRequirePlugin({
-          external: ['react', 'react/jsx-runtime'],
+          external: ["react", "react/jsx-runtime"],
         }),
       ],
       // input: Object.fromEntries(
@@ -139,10 +147,10 @@ export default defineConfig({
     },
   },
   test: {
-    root: '.', // Override the default `root` of `./app`
-    environment: 'jsdom',
+    root: ".", // Override the default `root` of `./app`
+    environment: "jsdom",
     globals: true,
-    setupFiles: ['./tests/setup-rtl.ts'],
+    setupFiles: ["./tests/setup-rtl.ts"],
     deps: {
       optimizer: {
         web: {
@@ -154,8 +162,8 @@ export default defineConfig({
       {
         extends: true,
         test: {
-          name: 'unit',
-          include: ['./src/**/*.test.{ts,tsx}'],
+          name: "unit",
+          include: ["./src/**/*.test.{ts,tsx}"],
         },
       },
       {
@@ -164,18 +172,19 @@ export default defineConfig({
           // The plugin will run tests for the stories defined in your Storybook config
           // See options at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon#storybooktest
           storybookTest({
-            configDir: path.join(dirname, '.storybook'),
+            configDir: path.join(dirname, ".storybook"),
           }),
         ],
         test: {
-          name: 'storybook',
+          name: "storybook",
           browser: {
             enabled: true,
             headless: true,
+            viewport: { width: 390, height: 844 },
             provider: playwright(playwrightProviderOptions),
             instances: [
               {
-                browser: 'chromium',
+                browser: "chromium",
               },
             ],
           },
