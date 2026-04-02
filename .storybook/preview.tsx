@@ -1,4 +1,7 @@
 import type { Preview } from '@storybook/react-vite';
+import '../src/styling/main.scss';
+import { BaklavaProvider } from '../src/context/BaklavaProvider';
+import * as React from 'react';
 
 const preview: Preview = {
   parameters: {
@@ -12,6 +15,13 @@ const preview: Preview = {
       test: 'todo',
     },
   },
+  decorators: [
+    (Story) => (
+      <BaklavaProvider>
+        <Story />
+      </BaklavaProvider>
+    ),
+  ],
 };
 
 export default preview;
