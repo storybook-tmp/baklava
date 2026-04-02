@@ -1,6 +1,22 @@
-import type { Preview } from '@storybook/react-vite';
+import * as React from 'react';
 
-const preview: Preview = {
+import { definePreview } from '@storybook/react-vite';
+
+import '../src/styling/main.scss';
+
+import { BaklavaProvider } from '../src/context/BaklavaProvider.tsx';
+import { LayoutDecorator } from '../src/util/storybook/LayoutDecorator.tsx';
+
+const preview = definePreview({
+  decorators: [
+    Story => (
+      <BaklavaProvider>
+        <LayoutDecorator size="medium">
+          <Story />
+        </LayoutDecorator>
+      </BaklavaProvider>
+    ),
+  ],
   parameters: {
     controls: {
       matchers: {
@@ -12,6 +28,6 @@ const preview: Preview = {
       test: 'todo',
     },
   },
-};
+});
 
 export default preview;
