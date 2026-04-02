@@ -53,6 +53,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ["zustand"],
+  },
 
   plugins: [
     react(),
