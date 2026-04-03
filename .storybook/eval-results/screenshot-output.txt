@@ -1,0 +1,7 @@
+RUN  v4.1.0 /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-03T10-50-44Z-db46feda/project
+
+
+ Test Files  9 passed (9)
+      Tests  18 passed (18)
+   Start at  18:00:35
+   Duration  4.70s (transform 0ms, setup 13.29s, import 3.89s, tests 4.98s, environment 0ms)
