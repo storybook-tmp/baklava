@@ -53,6 +53,20 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: [
+      '@floating-ui/react',
+      '@ngneat/falso',
+      '@tanstack/react-virtual',
+      'date-fns',
+      'effect',
+      'message-tag',
+      'react-datepicker',
+      'react-hook-form',
+      'react-table',
+      'zustand',
+    ],
+  },
 
   plugins: [
     react(),
