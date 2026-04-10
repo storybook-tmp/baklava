@@ -46,6 +46,9 @@ export default defineConfig({
   base: "./", // Assets base URL
 
   assetsInclude: ["**/*.md"], // Add `.md` as static asset type
+  optimizeDeps: {
+    include: ["zustand"],
+  },
 
   resolve: {
     alias: {
