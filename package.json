@@ -57,7 +57,8 @@
     "coverage": "vitest run --coverage",
     "test:storybook": "vitest run --project=storybook",
     "start": "npm run storybook:serve",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "vitest:storybook": "vitest run --project=storybook"
   },
   "devDependencies": {
     "plop": "^4.0.5",
