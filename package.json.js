@@ -118,6 +118,7 @@ const packageConfig = {
     '@vitest/ui': '^4.1.0',
     '@vitest/browser-playwright': '^4.1.0',
     '@vitest/coverage-v8': '^4.1.0',
+    '@testing-library/dom': '^10.0.0',
     '@testing-library/react': '^16.3.2',
     '@testing-library/user-event': '^14.6.1',
     '@testing-library/jest-dom': '^6.9.1',
@@ -126,15 +127,17 @@ const packageConfig = {
     'playwright': '^1.58.2',
     
     // Storybook
-    'storybook': '^10.3.3',
-    '@storybook/react-vite': '^10.3.3',
-    '@storybook/addon-a11y': '^10.3.3',
-    '@storybook/addon-docs': '^10.3.3',
-    '@storybook/addon-links': '^10.3.3',
-    '@storybook/addon-onboarding': '^10.3.3',
-    '@storybook/addon-vitest': '^10.3.3',
+    'storybook': '0.0.0-pr-34421-sha-8babe7bc',
+    '@storybook/react-vite': '0.0.0-pr-34421-sha-8babe7bc',
+    '@storybook/addon-a11y': '0.0.0-pr-34421-sha-8babe7bc',
+    '@storybook/addon-docs': '0.0.0-pr-34421-sha-8babe7bc',
+    '@storybook/addon-links': '0.0.0-pr-34421-sha-8babe7bc',
+    '@storybook/addon-onboarding': '0.0.0-pr-34421-sha-8babe7bc',
+    '@storybook/addon-vitest': '0.0.0-pr-34421-sha-8babe7bc',
     'chromatic': '^15.2.0', // https://github.com/chromaui/chromatic-cli/blob/main/CHANGELOG.md
     '@chromatic-com/storybook': '^5.0.1', // Chromatic integration for Storybook
+    'msw': '^2.12.14',
+    'msw-storybook-addon': '^2.0.6',
     //'storybook-addon-pseudo-states': '^3.1.1',
     //'@storybook-community/storybook-dark-mode': '^6.0.0',
     //'@percy/cli': '^1.31.2',
