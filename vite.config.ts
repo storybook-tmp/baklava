@@ -53,6 +53,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  optimizeDeps: {
+    include: ["@floating-ui/react", "classnames/dedupe", "zustand"],
+  },
 
   plugins: [
     react(),
