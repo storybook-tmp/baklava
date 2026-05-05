@@ -1,6 +1,18 @@
-import type { Preview } from '@storybook/react-vite';
+import * as React from 'react';
+import { definePreview } from '@storybook/react-vite';
 
-const preview: Preview = {
+import '../src/styling/main.scss';
+
+import { BaklavaProvider } from '../src/context/BaklavaProvider.tsx';
+
+export const config = definePreview({
+  decorators: [
+    Story => (
+      <BaklavaProvider>
+        <Story />
+      </BaklavaProvider>
+    ),
+  ],
   parameters: {
     controls: {
       matchers: {
@@ -12,6 +24,6 @@ const preview: Preview = {
       test: 'todo',
     },
   },
-};
+});
 
-export default preview;
+export default config;
