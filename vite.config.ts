@@ -101,6 +101,9 @@ export default defineConfig({
       },
     },
   },
+  optimizeDeps: {
+    include: ["zustand"],
+  },
   // https://dev.to/receter/how-to-create-a-react-component-library-using-vites-library-mode-4lma
   // https://victorlillo.dev/blog/react-typescript-vite-component-library
   build: {
