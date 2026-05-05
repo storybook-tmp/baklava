@@ -1,0 +1,56 @@
+> @fortanix/baklava@1.0.0-beta-20260330 vitest:storybook
+> vitest run --project=storybook --reporter=json --outputFile=/Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/.storybook/eval-results/story-render-report.json /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/actions/Button/Button.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/containers/Banner/Banner.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/forms/context/Form/Form.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/forms/controls/Select/Select.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/graphics/PlaceholderEmpty/PlaceholderEmpty.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/lists/PropertyList/PropertyList.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/navigations/Tabs/Tabs.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/components/overlays/DialogModal/DialogModal.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/layouts/AppLayout/AppLayout.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/layouts/PageLayout/PageLayout.stories.tsx /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/src/layouts/PublicLayout/PublicLayout.stories.tsx
+
+5:44:56 PM [vite] (client) Re-optimizing dependencies because vite config has changed
+JSON report written to /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-20T10-26-20Z-82219c1d/project/.storybook/eval-results/story-render-report.json
+
+5:45:01 PM [vite] (client) [console.error] An update to TooltipProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+5:45:01 PM [vite] (client) [console.error] An update to null inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+5:45:01 PM [vite] (client) [console.error] An update to ToastProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+5:45:01 PM [vite] (client) [console.error] An update to ToastProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+5:45:01 PM [vite] (client) [console.error] An update to TooltipProvider inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
