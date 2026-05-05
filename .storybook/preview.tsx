@@ -1,6 +1,16 @@
 import type { Preview } from '@storybook/react-vite';
 
+import '../src/styling/main.scss';
+import { BaklavaProvider } from '../src/context/BaklavaProvider';
+
 const preview: Preview = {
+  decorators: [
+    (Story) => (
+      <BaklavaProvider>
+        <Story />
+      </BaklavaProvider>
+    ),
+  ],
   parameters: {
     controls: {
       matchers: {
