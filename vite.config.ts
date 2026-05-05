@@ -81,6 +81,9 @@ export default defineConfig({
       tsconfigPath: path.resolve(__dirname, "tsconfig.app.json"),
     }),
   ],
+  optimizeDeps: {
+    include: ["ts-dedent", "zustand"],
+  },
   css: {
     // Configure preprocessing using Sass
     preprocessorOptions: {
