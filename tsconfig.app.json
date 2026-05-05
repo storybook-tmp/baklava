@@ -19,7 +19,8 @@
     "resolveJsonModule": true, // Allow importing `.json` files
     "forceConsistentCasingInFileNames": true, // Do not allow case-insensitive import file name matching
     "paths": {
-      //"@": ["./src"],
+      "@": ["./src"],
+      "#.storybook/preview": ["./.storybook/preview.ts"],
     },
     
     // Type checking
