@@ -1,0 +1,314 @@
+
+┌  Building storybook v0.0.0-pr-34421-sha-0f73e3a9
+│
+◇  Cleaning outputDir: storybook-static
+│
+◇  Loading presets
+│
+◇  Building manager..
+│
+●  Building preview..
+│
+▲  Vite
+│  [vite:dts] You are building a library that may not need to generate
+│  declaration files.
+
+│  Vite vite v8.0.0 building client environment for production...
+[2Ktransforming...✓ 237 modules transformed.
+rendering chunks...
+│  Vite
+│  [vite:dts] Start generate declaration files...
+│
+■  Vite [96msrc/components/overlays/DialogModal/DialogModal.stories.tsx[0m:[93m24[0m:[93m49[0m
+│  - [91merror[0m[90m TS2322: [0mType '{ active: boolean; activate: () => void; }' is
+│  not assignable to type '() => void | Promise<void>'.
+│  Type '{ active: boolean; activate: () => void; }' provides no match
+│  for the signature '(): void | Promise<void>'.
+
+│  [7m24[0m       <Button label="Open Modal" kind="primary" onPress={activate}
+│  />
+│  [7m[0m[91m~~~~~~~[0m
+
+│  [96msrc/components/actions/Button/Button.tsx[0m:[93m61[0m:[93m3[0m
+│  [7m61[0m   onPress?: undefined | (() => void | Promise<void>),
+│  [7m[0m[96m~~~~~~~[0m
+│  The expected type comes from property 'onPress' which is declared here
+│  on type 'IntrinsicAttributes & Omit<ComponentProps<"button">, "type">
+│  & { unstyled?: boolean | undefined; trimmed?: boolean | undefined;
+│  label?: string | undefined; icon?: "search" | "script" | "key" |
+│  "download" | "send" | "group" | "email" | "copy" | "account" |
+│  "accounts" | "activity" | "app" | "audit-log" | "badge-assessment" |
+│  "badge-dashboard" | "bell" | "build" | "calendar" | "caret-down" |
+│  "caret-left" | "caret-right" | "caret-up" | "check" | "cloud-accounts"
+│  | "cloud-connection" | "compute-node" | "conversation-new" | "cross" |
+│  "cryptography" | "dashboard" | "dataverse" | "delete" | "demo" |
+│  "docs" | "documentation" | "edit-params" | "edit" |
+│  "ellipsis-vertical" | "eye-closed" | "eye-open" | "file" |
+│  "filter-closed" | "filter-open" | "help" | "home" | "info-filled" |
+│  "info" | "install" | "integration" | "key-link" | "knowledge-base" |
+│  "link-external" | "login" | "logout" | "on-premises" | "page-backward"
+│  | "page-forward" | "plugin" | "policy" | "print" | "projects" |
+│  "query" | "refresh" | "security-dashboard" | "security-object" |
+│  "services" | "settings" | "solutions" | "status-canceled" |
+│  "status-failed-filled" | "status-failed" | "status-success-filled" |
+│  "status-success" | "system-admin" | "tasks" | "user-authentication" |
+│  "user-profile" | "user" | "warning-filled" | "warning" | "workflow" |
+│  undefined; kind?: "primary" | "secondary" | "tertiary" | undefined;
+│  variant?: "normal" | undefined; disabled?: boolean | undefined;
+│  nonactive?: boolean | undefined; asyncTimeout?: number; onPress?: (()
+│  => void | Promise<void>) | undefined; } & { children?: ReactNode; }'
+│  [96msrc/components/overlays/DialogModal/DialogModal.stories.tsx[0m:[93m36[0m:[93m56[0m -
+│  [91merror[0m[90m TS2322: [0mType '{ active: boolean; activate: () => void; }' is not
+│  assignable to type '() => void | Promise<void>'.
+│  Type '{ active: boolean; activate: () => void; }' provides no match
+│  for the signature '(): void | Promise<void>'.
+
+│  [7m36[0m       <Button label="Open Slide Over" kind="secondary"
+│  onPress={activate} />
+│  [7m[0m[91m~~~~~~~[0m
+
+│  [96msrc/components/actions/Button/Button.tsx[0m:[93m61[0m:[93m3[0m
+│  [7m61[0m   onPress?: undefined | (() => void | Promise<void>),
+│  [7m[0m[96m~~~~~~~[0m
+│  The expected type comes from property 'onPress' which is declared here
+│  on type 'IntrinsicAttributes & Omit<ComponentProps<"button">, "type">
+│  & { unstyled?: boolean | undefined; trimmed?: boolean | undefined;
+│  label?: string | undefined; icon?: "search" | "script" | "key" |
+│  "download" | "send" | "group" | "email" | "copy" | "account" |
+│  "accounts" | "activity" | "app" | "audit-log" | "badge-assessment" |
+│  "badge-dashboard" | "bell" | "build" | "calendar" | "caret-down" |
+│  "caret-left" | "caret-right" | "caret-up" | "check" | "cloud-accounts"
+│  | "cloud-connection" | "compute-node" | "conversation-new" | "cross" |
+│  "cryptography" | "dashboard" | "dataverse" | "delete" | "demo" |
+│  "docs" | "documentation" | "edit-params" | "edit" |
+│  "ellipsis-vertical" | "eye-closed" | "eye-open" | "file" |
+│  "filter-closed" | "filter-open" | "help" | "home" | "info-filled" |
+│  "info" | "install" | "integration" | "key-link" | "knowledge-base" |
+│  "link-external" | "login" | "logout" | "on-premises" | "page-backward"
+│  | "page-forward" | "plugin" | "policy" | "print" | "projects" |
+│  "query" | "refresh" | "security-dashboard" | "security-object" |
+│  "services" | "settings" | "solutions" | "status-canceled" |
+│  "status-failed-filled" | "status-failed" | "status-success-filled" |
+│  "status-success" | "system-admin" | "tasks" | "user-authentication" |
+│  "user-profile" | "user" | "warning-filled" | "warning" | "workflow" |
+│  undefined; kind?: "primary" | "secondary" | "tertiary" | undefined;
+│  variant?: "normal" | undefined; disabled?: boolean | undefined;
+│  nonactive?: boolean | undefined; asyncTimeout?: number; onPress?: (()
+│  => void | Promise<void>) | undefined; } & { children?: ReactNode; }'
+
+│  Vite [vite:dts] Declaration files built in 5109ms.
+
+computing gzip size...
+│  Vite storybook-static/assets/context-C0qIqeS4.png
+│  6.11 kB
+│  storybook-static/assets/styling-Bk6zjRzU.png
+│  7.23 kB
+│  storybook-static/assets/source-code-pro-v14-latin-regular-m_t_6fI-.woff2
+│  13.76 kB
+│  storybook-static/assets/open-sans-v23-latin-regular-B5w680Sh.woff2
+│  14.44 kB
+│  storybook-static/assets/open-sans-v23-latin-600-DE3RXGo1.woff2
+│  14.95 kB
+│  storybook-static/assets/open-sans-v23-latin-700-I2siTApF.woff2
+│  15.11 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-100-CDbDUzSo.woff2
+│  17.84 kB
+│  storybook-static/iframe.html
+│  18.80 kB │ gzip:   5.36 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-200-gPwWznAn.woff2
+│  19.11 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-300-ZhRT9hBp.woff2
+│  19.33 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-regular-Cv6cyHvc.woff2
+│  19.39 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-600-MsbOrCbp.woff2
+│  19.46 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-500-BGBNs1AU.woff2
+│  19.58 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-700-BYJdiEkj.woff2
+│  19.76 kB
+│  storybook-static/assets/docs---vsFbMi.png
+│  27.87 kB
+│  storybook-static/assets/share-DGA-UcQf.png
+│  40.76 kB
+│  storybook-static/assets/accessibility-W_h2acOZ.png
+│  42.33 kB
+│  storybook-static/assets/figma-plugin-CH2hELiO.png
+│  44.24 kB
+│  storybook-static/assets/theming-D6WJLNoW.png
+│  44.37 kB
+│  storybook-static/assets/testing-cbzR9l9r.png
+│  49.31 kB
+│  storybook-static/assets/addon-library-BWUCAmyN.png
+│  467.36 kB
+│  storybook-static/assets/Header-CzZBVs_w.css
+│  0.50 kB │ gzip:   0.29 kB
+│  storybook-static/assets/Button-C9QAnAgh.css
+│  0.51 kB │ gzip:   0.28 kB
+│  storybook-static/assets/Scroller-DS-XgnQ7.css
+│  0.56 kB │ gzip:   0.16 kB
+│  storybook-static/assets/Tag-D4KTaxMV.css
+│  0.65 kB │ gzip:   0.36 kB
+│  storybook-static/assets/IconButton--DdAJ3eb.css
+│  0.65 kB │ gzip:   0.32 kB
+│  storybook-static/assets/Icon-tZnCY114.css
+│  0.68 kB │ gzip:   0.38 kB
+│  storybook-static/assets/Page-R7v0XIE6.css
+│  0.91 kB │ gzip:   0.39 kB
+│  storybook-static/assets/Heading-ptFAfSHL.css
+│  1.07 kB │ gzip:   0.23 kB
+│  storybook-static/assets/Input-BB2GT9c0.css
+│  1.43 kB │ gzip:   0.58 kB
+│  storybook-static/assets/Card-0Ydpu7bp.css
+│  3.55 kB │ gzip:   1.05 kB
+│  storybook-static/assets/Dialog-lwvA4hUx.css
+│  4.43 kB │ gzip:   1.04 kB
+│  storybook-static/assets/Banner-BS0kBprZ.css
+│  4.50 kB │ gzip:   0.88 kB
+│  storybook-static/assets/Tabs-BfAnF1VM.css
+│  5.24 kB │ gzip:   0.97 kB
+│  storybook-static/assets/Button-BnpzVLjq.css
+│  5.73 kB │ gzip:   1.30 kB
+│  storybook-static/assets/TooltipProvider-CsF9X3at.css
+│  7.38 kB │ gzip:   1.46 kB
+│  storybook-static/assets/DialogModal-DKPGkkZ8.css
+│  10.04 kB │ gzip:   1.11 kB
+│  storybook-static/assets/iframe-drpVYZEb.css
+│  38.01 kB │ gzip:   4.18 kB
+│  storybook-static/assets/theming-DXsAAQdI.js
+│  0.07 kB │ gzip:   0.08 kB
+│  storybook-static/assets/react-18-Dd-Zjh4H.js
+│  0.10 kB │ gzip:   0.10 kB
+│  storybook-static/assets/mdx-react-shim-DQu4Ep6e.js
+│  0.11 kB │ gzip:   0.11 kB
+│  storybook-static/assets/components-CAD5eIQr.js
+│  0.14 kB │ gzip:   0.14 kB
+│  storybook-static/assets/chunk-242VQQM5-Vb6b6OWg.js
+│  0.21 kB │ gzip:   0.18 kB
+│  storybook-static/assets/chunk-S2IHWCOG-Bnq83qdV.js
+│  0.23 kB │ gzip:   0.16 kB
+│  storybook-static/assets/formatter-EIJCOSYU-B2NbCISw.js
+│  0.27 kB │ gzip:   0.21 kB
+│  storybook-static/assets/jsx-runtime-DC1gUR_G.js
+│  0.42 kB │ gzip:   0.29 kB
+│  storybook-static/assets/react-CVuwmtrJ.js
+│  0.52 kB │ gzip:   0.32 kB
+│  storybook-static/assets/Icon.stories-BqUuK6h0.js
+│  0.68 kB │ gzip:   0.36 kB
+│  storybook-static/assets/Scroller-CXyttddp.js
+│  0.69 kB │ gzip:   0.33 kB
+│  storybook-static/assets/Header.stories-BRa7XXC0.js
+│  0.72 kB │ gzip:   0.41 kB
+│  storybook-static/assets/IconButton-D4we7q8b.js
+│  0.80 kB │ gzip:   0.48 kB
+│  storybook-static/assets/reactUtil-hC4KRoKa.js
+│  0.81 kB │ gzip:   0.47 kB
+│  storybook-static/assets/chunk-A242L54C-DFwdhqNr.js
+│  0.91 kB │ gzip:   0.53 kB
+│  storybook-static/assets/Button.stories-DVw5HhAW.js
+│  1.02 kB │ gzip:   0.42 kB
+│  storybook-static/assets/componentUtil-8ZkSIyHi.js
+│  1.04 kB │ gzip:   0.57 kB
+│  storybook-static/assets/chunk-BneVvdWh.js
+│  1.11 kB │ gzip:   0.63 kB
+│  storybook-static/assets/Dialog.stories-CbzTXe-v.js
+│  1.23 kB │ gzip:   0.57 kB
+│  storybook-static/assets/Button.stories-CEvwTaM_.js
+│  1.26 kB │ gzip:   0.50 kB
+│  storybook-static/assets/preload-helper-CV6hqhE5.js
+│  1.27 kB │ gzip:   0.73 kB
+│  storybook-static/assets/Button-B9mwqsQk.js
+│  1.37 kB │ gzip:   0.67 kB
+│  storybook-static/assets/DocsRenderer-LL677BLK-BeRVcgvb.js
+│  1.42 kB │ gzip:   0.77 kB
+│  storybook-static/assets/Tag.stories-B8dt5GCD.js
+│  2.00 kB │ gzip:   0.96 kB
+│  storybook-static/assets/Header-DF7QFVCk.js
+│  2.04 kB │ gzip:   0.87 kB
+│  storybook-static/assets/Icon-BT7b5usb.js
+│  2.27 kB │ gzip:   1.08 kB
+│  storybook-static/assets/Button-BAzEP-ec.js
+│  2.71 kB │ gzip:   1.23 kB
+│  storybook-static/assets/summary-B6qcH1BI.js
+│  2.91 kB │ gzip:   0.78 kB
+│  storybook-static/assets/Heading-B8kVfaVc.js
+│  3.30 kB │ gzip:   0.54 kB
+│  storybook-static/assets/react-dom-C6d4Z9dG.js
+│  3.57 kB │ gzip:   1.35 kB
+│  storybook-static/assets/Page.stories-ClCqEzFr.js
+│  3.63 kB │ gzip:   1.58 kB
+│  storybook-static/assets/chunk-3LY4VQVK-B7PZR68W.js
+│  4.03 kB │ gzip:   1.71 kB
+│  storybook-static/assets/Tabs.stories-W0g30rvI.js
+│  5.32 kB │ gzip:   1.80 kB
+│  storybook-static/assets/Card.stories-DGrbVKFp.js
+│  6.25 kB │ gzip:   2.05 kB
+│  storybook-static/assets/Banner.stories-DJF0ABhp.js
+│  6.35 kB │ gzip:   2.04 kB
+│  storybook-static/assets/Dialog-DDa3o_HM.js
+│  6.44 kB │ gzip:   2.08 kB
+│  storybook-static/assets/Input.stories-8BcsLVaA.js
+│  8.75 kB │ gzip:   2.50 kB
+│  storybook-static/assets/transcript-Dx7P9jAd.js
+│  14.45 kB │ gzip:   4.71 kB
+│  storybook-static/assets/DialogModal.stories-DzltX68p.js
+│  20.38 kB │ gzip:   4.91 kB
+│  storybook-static/assets/chunk-RD3KTAHR-BsNrStSe.js
+│  20.74 kB │ gzip:   6.92 kB
+│  storybook-static/assets/Configure-BsCGZBZM.js
+│  26.91 kB │ gzip:  11.32 kB
+│  storybook-static/vite-inject-mocker-entry.js
+│  27.85 kB │ gzip:   9.64 kB
+│  storybook-static/assets/matchers-5TDFFDYO-Bq-rmp6f.js
+│  28.81 kB │ gzip:   9.67 kB
+│  storybook-static/assets/Color-23OOGO2C-DtqbeerB.js
+│  30.93 kB │ gzip:  11.61 kB
+│  storybook-static/assets/WithTooltip-65CFNBJE-YyonwpE_.js
+│  33.28 kB │ gzip:  11.68 kB
+│  storybook-static/assets/TooltipProvider-CPIHHVYv.js
+│  52.42 kB │ gzip:  17.83 kB
+│  storybook-static/assets/theming-DviCHfMh.js
+│  55.05 kB │ gzip:  21.22 kB
+│  storybook-static/assets/chunk-IYCKG66Y-BJUo6CKl.js
+│  59.20 kB │ gzip:  16.93 kB
+│  storybook-static/assets/syntaxhighlighter-OH4MV7E3-DJTN_ynr.js
+│  76.14 kB │ gzip:  27.38 kB
+│  storybook-static/assets/react-18-BJksbXVS.js
+│  179.05 kB │ gzip:  56.64 kB
+│  storybook-static/assets/blocks-DAo6kaiF.js
+│  183.26 kB │ gzip:  58.04 kB
+│  storybook-static/assets/components-0H8YujfB.js
+│  546.12 kB │ gzip: 173.59 kB
+│  storybook-static/assets/axe-CteQxQ2M.js
+│  567.61 kB │ gzip: 154.78 kB
+│  storybook-static/assets/iframe-DgAB2_nJ.js
+│  1,028.39 kB │ gzip: 290.86 kB
+│  storybook-static/assets/data-Dj0FRAsJ.js
+│  1,119.94 kB │ gzip: 222.67 kB
+
+│
+▲  Vite [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in
+│  plugins. Here is a breakdown:
+│  - vite:dts (19%)
+│  - storybook:mock-loader (19%)
+│  - storybook:react-docgen-plugin (16%)
+│  - storybook:project-annotations-plugin (15%)
+│  - vite:css (12%)
+│  See ]8;;https://rolldown.rs/options/checks#plugintimingshttps://rolldown.rs/options/checks#plugintimings]8;; for more details.
+
+│
+▲  Vite [plugin builtin:vite-reporter]
+│  (!) Some chunks are larger than 500 kB after minification. Consider:
+│  - Using dynamic import() to code-split the application
+│  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+│  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+│  - Adjust chunk size limit for this warning via
+│  build.chunkSizeWarningLimit.
+│  Vite ✓ built in 6.71s
+│
+◇  Output directory:
+│  /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-02T16-27-00Z-033264b7/project/storybook-static
+│
+└  Storybook build completed successfully
+
+
