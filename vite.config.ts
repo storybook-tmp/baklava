@@ -54,6 +54,11 @@ export default defineConfig({
     },
   },
 
+  optimizeDeps: {
+    // Prebundle storybook/browser-test dependencies up front to avoid mid-run reloads in Vitest browser mode.
+    include: ["date-fns", "message-tag", "react-datepicker", "react-table", "zustand"],
+  },
+
   plugins: [
     react(),
 
