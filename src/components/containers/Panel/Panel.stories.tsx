@@ -1,0 +1,35 @@
+import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Panel } from './Panel.tsx';
+
+const meta = {
+  component: Panel,
+} satisfies Meta<typeof Panel>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  render: () => (
+    <Panel>
+      <p>Panel content goes here.</p>
+    </Panel>
+  ),
+};
+
+export const WithHeading: Story = {
+  render: () => (
+    <Panel>
+      <Panel.Heading>Panel title</Panel.Heading>
+      <p>This is a panel with a heading and some body content below it.</p>
+    </Panel>
+  ),
+};
+
+export const Edgeless: Story = {
+  render: () => (
+    <Panel edgeless>
+      <Panel.Heading>Edgeless panel</Panel.Heading>
+      <p>This panel has no border or padding.</p>
+    </Panel>
+  ),
+};
