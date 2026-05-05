@@ -1,0 +1,218 @@
+
+┌  Building storybook v0.0.0-pr-34421-sha-0f73e3a9
+│
+◇  Cleaning outputDir: storybook-static
+│
+◇  Loading presets
+│
+◇  Building manager..
+│
+●  Building preview..
+│
+▲  Vite
+│  [vite:dts] You are building a library that may not need to generate
+│  declaration files.
+
+│  Vite vite v8.0.0 building client environment for production...
+[2Ktransforming...✓ 236 modules transformed.
+rendering chunks...
+│  Vite
+│  [vite:dts] Start generate declaration files...
+│  Vite [vite:dts] Declaration files built in 5838ms.
+
+computing gzip size...
+│  Vite storybook-static/assets/context-C0qIqeS4.png
+│  6.11 kB
+│  storybook-static/assets/styling-Bk6zjRzU.png
+│  7.23 kB
+│  storybook-static/assets/source-code-pro-v14-latin-regular-m_t_6fI-.woff2
+│  13.76 kB
+│  storybook-static/assets/open-sans-v23-latin-regular-B5w680Sh.woff2
+│  14.44 kB
+│  storybook-static/assets/open-sans-v23-latin-600-DE3RXGo1.woff2
+│  14.95 kB
+│  storybook-static/assets/open-sans-v23-latin-700-I2siTApF.woff2
+│  15.11 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-100-CDbDUzSo.woff2
+│  17.84 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-200-gPwWznAn.woff2
+│  19.11 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-300-ZhRT9hBp.woff2
+│  19.33 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-regular-Cv6cyHvc.woff2
+│  19.39 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-600-MsbOrCbp.woff2
+│  19.46 kB
+│  storybook-static/iframe.html
+│  19.51 kB │ gzip:   5.49 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-500-BGBNs1AU.woff2
+│  19.58 kB
+│  storybook-static/assets/montserrat-v25-latin_latin-ext-700-BYJdiEkj.woff2
+│  19.76 kB
+│  storybook-static/assets/docs---vsFbMi.png
+│  27.87 kB
+│  storybook-static/assets/share-DGA-UcQf.png
+│  40.76 kB
+│  storybook-static/assets/accessibility-W_h2acOZ.png
+│  42.33 kB
+│  storybook-static/assets/figma-plugin-CH2hELiO.png
+│  44.24 kB
+│  storybook-static/assets/theming-D6WJLNoW.png
+│  44.37 kB
+│  storybook-static/assets/testing-cbzR9l9r.png
+│  49.31 kB
+│  storybook-static/assets/addon-library-BWUCAmyN.png
+│  467.36 kB
+│  storybook-static/assets/Form-CNy73-lg.css
+│  0.09 kB │ gzip:   0.09 kB
+│  storybook-static/assets/Header-CzZBVs_w.css
+│  0.50 kB │ gzip:   0.29 kB
+│  storybook-static/assets/Button-C9QAnAgh.css
+│  0.51 kB │ gzip:   0.28 kB
+│  storybook-static/assets/Tag-D4KTaxMV.css
+│  0.65 kB │ gzip:   0.36 kB
+│  storybook-static/assets/Icon-tZnCY114.css
+│  0.68 kB │ gzip:   0.38 kB
+│  storybook-static/assets/Page-R7v0XIE6.css
+│  0.91 kB │ gzip:   0.39 kB
+│  storybook-static/assets/Input-BB2GT9c0.css
+│  1.43 kB │ gzip:   0.58 kB
+│  storybook-static/assets/Accordion-C0SIOlG1.css
+│  3.98 kB │ gzip:   0.99 kB
+│  storybook-static/assets/Card-BnrOU_uk.css
+│  4.60 kB │ gzip:   1.14 kB
+│  storybook-static/assets/Button-BnpzVLjq.css
+│  5.73 kB │ gzip:   1.30 kB
+│  storybook-static/assets/iframe-DzY2xjVc.css
+│  52.45 kB │ gzip:   6.61 kB
+│  storybook-static/assets/react-B3JigXC0.js
+│  0.07 kB │ gzip:   0.08 kB
+│  storybook-static/assets/theming-B1E9rl_S.js
+│  0.07 kB │ gzip:   0.08 kB
+│  storybook-static/assets/react-18-DOcCIEbk.js
+│  0.10 kB │ gzip:   0.10 kB
+│  storybook-static/assets/mdx-react-shim-BRet6sOR.js
+│  0.11 kB │ gzip:   0.11 kB
+│  storybook-static/assets/components-ChRkZaWx.js
+│  0.14 kB │ gzip:   0.14 kB
+│  storybook-static/assets/chunk-242VQQM5-BrqsBaEF.js
+│  0.21 kB │ gzip:   0.18 kB
+│  storybook-static/assets/chunk-S2IHWCOG-Cv0KldRY.js
+│  0.23 kB │ gzip:   0.16 kB
+│  storybook-static/assets/formatter-EIJCOSYU-B5R-Egcp.js
+│  0.27 kB │ gzip:   0.21 kB
+│  storybook-static/assets/jsx-runtime-B6lWK8m9.js
+│  0.42 kB │ gzip:   0.29 kB
+│  storybook-static/assets/react-bkvmdHXX.js
+│  0.48 kB │ gzip:   0.30 kB
+│  storybook-static/assets/Icon.stories-DPD1THGf.js
+│  0.63 kB │ gzip:   0.33 kB
+│  storybook-static/assets/Header.stories-Dc7es4eR.js
+│  0.72 kB │ gzip:   0.41 kB
+│  storybook-static/assets/Button.stories-Dfe3qIk3.js
+│  0.77 kB │ gzip:   0.36 kB
+│  storybook-static/assets/reactUtil-Dlmq4lqq.js
+│  0.81 kB │ gzip:   0.47 kB
+│  storybook-static/assets/Input.stories-BhlQnn_r.js
+│  0.85 kB │ gzip:   0.40 kB
+│  storybook-static/assets/Banner.stories-lQWfmLXa.js
+│  0.88 kB │ gzip:   0.40 kB
+│  storybook-static/assets/chunk-A242L54C-BY7o5QOM.js
+│  0.91 kB │ gzip:   0.53 kB
+│  storybook-static/assets/componentUtil-CRZKIEkv.js
+│  1.04 kB │ gzip:   0.57 kB
+│  storybook-static/assets/chunk-BneVvdWh.js
+│  1.11 kB │ gzip:   0.63 kB
+│  storybook-static/assets/Button.stories-DLR6JnNg.js
+│  1.26 kB │ gzip:   0.50 kB
+│  storybook-static/assets/preload-helper-CV6hqhE5.js
+│  1.27 kB │ gzip:   0.73 kB
+│  storybook-static/assets/DocsRenderer-LL677BLK-8b2F2LMG.js
+│  1.30 kB │ gzip:   0.70 kB
+│  storybook-static/assets/Button-CTfjfGzW.js
+│  1.37 kB │ gzip:   0.67 kB
+│  storybook-static/assets/Tag.stories-BRM4u5_B.js
+│  2.01 kB │ gzip:   0.95 kB
+│  storybook-static/assets/Header-DCtDB6oG.js
+│  2.04 kB │ gzip:   0.88 kB
+│  storybook-static/assets/Icon-BQt2v3wQ.js
+│  2.27 kB │ gzip:   1.08 kB
+│  storybook-static/assets/summary-BSUoOKWL.js
+│  2.91 kB │ gzip:   0.78 kB
+│  storybook-static/assets/Button-2VwLrraK.js
+│  2.99 kB │ gzip:   1.36 kB
+│  storybook-static/assets/Form.stories-BoLpONLC.js
+│  3.40 kB │ gzip:   1.38 kB
+│  storybook-static/assets/react-dom-C7onlZt5.js
+│  3.56 kB │ gzip:   1.35 kB
+│  storybook-static/assets/Page.stories-DO8truJw.js
+│  3.63 kB │ gzip:   1.58 kB
+│  storybook-static/assets/chunk-3LY4VQVK-Bs3dIt1O.js
+│  4.03 kB │ gzip:   1.71 kB
+│  storybook-static/assets/Accordion.stories-DvncYPc9.js
+│  5.86 kB │ gzip:   1.64 kB
+│  storybook-static/assets/react-B_0iYUWB.js
+│  7.52 kB │ gzip:   2.87 kB
+│  storybook-static/assets/Input-DrVWra0j.js
+│  8.08 kB │ gzip:   2.26 kB
+│  storybook-static/assets/Card.stories-0EDX5lxU.js
+│  9.12 kB │ gzip:   2.24 kB
+│  storybook-static/assets/transcript-CRPSy2L7.js
+│  14.45 kB │ gzip:   4.71 kB
+│  storybook-static/assets/chunk-RD3KTAHR-YsXJ4SHf.js
+│  20.74 kB │ gzip:   6.92 kB
+│  storybook-static/assets/Configure-DgjhlgK6.js
+│  26.91 kB │ gzip:  11.32 kB
+│  storybook-static/vite-inject-mocker-entry.js
+│  27.85 kB │ gzip:   9.64 kB
+│  storybook-static/assets/matchers-5TDFFDYO-I0Yk6RL2.js
+│  28.81 kB │ gzip:   9.67 kB
+│  storybook-static/assets/Color-23OOGO2C-Byd_tXZO.js
+│  30.96 kB │ gzip:  11.62 kB
+│  storybook-static/assets/WithTooltip-65CFNBJE-D5cxBPap.js
+│  33.28 kB │ gzip:  11.67 kB
+│  storybook-static/assets/theming-DLvCerlt.js
+│  55.05 kB │ gzip:  21.22 kB
+│  storybook-static/assets/chunk-IYCKG66Y-DdEKgcOj.js
+│  59.20 kB │ gzip:  16.93 kB
+│  storybook-static/assets/syntaxhighlighter-OH4MV7E3-klKul_Et.js
+│  76.14 kB │ gzip:  27.38 kB
+│  storybook-static/assets/react-18-CHm_cjgh.js
+│  179.05 kB │ gzip:  56.63 kB
+│  storybook-static/assets/blocks-BDU7-KnH.js
+│  183.49 kB │ gzip:  58.17 kB
+│  storybook-static/assets/data-0_LF3Ca0.js
+│  525.00 kB │ gzip:  97.83 kB
+│  storybook-static/assets/components-61ZgkEIo.js
+│  545.98 kB │ gzip: 173.52 kB
+│  storybook-static/assets/axe-DBa3N5yI.js
+│  567.61 kB │ gzip: 154.78 kB
+│  storybook-static/assets/iframe-5zPwnRZo.js
+│  1,088.11 kB │ gzip: 310.15 kB
+
+│
+▲  Vite [33m[PLUGIN_TIMINGS] Warning:[0m Your build spent significant time in
+│  plugins. Here is a breakdown:
+│  - storybook:project-annotations-plugin (22%)
+│  - vite:css (19%)
+│  - storybook:mock-loader (16%)
+│  - vite:dts (15%)
+│  - vite-plugin-svgr (6%)
+│  See ]8;;https://rolldown.rs/options/checks#plugintimingshttps://rolldown.rs/options/checks#plugintimings]8;; for more details.
+
+│
+▲  Vite [plugin builtin:vite-reporter]
+│  (!) Some chunks are larger than 500 kB after minification. Consider:
+│  - Using dynamic import() to code-split the application
+│  - Use build.rolldownOptions.output.codeSplitting to improve chunking:
+│  ]8;;https://rolldown.rs/reference/OutputOptions.codeSplittinghttps://rolldown.rs/reference/OutputOptions.codeSplitting]8;;
+│  - Adjust chunk size limit for this warning via
+│  build.chunkSizeWarningLimit.
+│  Vite ✓ built in 8.66s
+│
+◇  Output directory:
+│  /Users/kasperpeulen/code/storybook/storybook-eval/trials/2026-04-02T15-25-16Z-807e0094/project/storybook-static
+│
+└  Storybook build completed successfully
+
+
