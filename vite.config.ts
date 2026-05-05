@@ -47,6 +47,10 @@ export default defineConfig({
 
   assetsInclude: ["**/*.md"], // Add `.md` as static asset type
 
+  optimizeDeps: {
+    include: ["zustand"],
+  },
+
   resolve: {
     alias: {
       // Needed for file references in Sass code (relative paths don't resolve properly when imported with `@use`)
