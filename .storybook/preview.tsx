@@ -1,5 +1,8 @@
 import type { Preview } from '@storybook/react-vite';
 
+// Import global styles - must be before component imports
+import '../src/styling/main.scss';
+
 const preview: Preview = {
   parameters: {
     controls: {
